@@ -1,5 +1,8 @@
 package com.in28minutes.getstart.getstart.demo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BubleSortAlgorithm implements SortAlgorithm{
     public int[] sort(int[] numbers) {
     	

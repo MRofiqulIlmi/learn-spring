@@ -1,7 +1,14 @@
 package com.in28minutes.getstart.getstart.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+//component tell the spring is a beans
+@Component
 public class BinarySearchImpl {
 	
+	//autowired tells the spring sortAlgorithm is a dependencies
+	@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
 	
