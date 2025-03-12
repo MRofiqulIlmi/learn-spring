@@ -8,11 +8,24 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 	
 	//autowired tells the spring sortAlgorithm is a dependencies
+	// if only these one without the setter below and the constuctor, is still the setter
 	@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
 	
 	
+	
+	//if using setter injection - if not provide, the context will not launch at all, so basicly like mandatory also
+	//basicly is same with constructor, but more less line only
+	
+	// @Autowired
+	//public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
+	//	this.sortAlgorithm = sortAlgorithm;
+	//}
+
+
+	//if using constructor injection
+	//the best way is using constructor because can evade nullPointerExeption because mandatory
 	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
 		//1. super in Java refers to the parent class and is used to call its constructor or methods from a child class.
 		//2. 'super()' must be first statement in constructor
