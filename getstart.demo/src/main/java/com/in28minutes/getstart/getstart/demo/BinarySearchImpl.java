@@ -1,6 +1,7 @@
 package com.in28minutes.getstart.getstart.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //component tell the spring is a beans
@@ -11,11 +12,15 @@ public class BinarySearchImpl {
 	// if only these one without the setter below and the constuctor, is still the
 	// setter
 	@Autowired
-	private SortAlgorithm bubleSortAlgorithm;
+	@Qualifier("bubble")
+	private SortAlgorithm sortAlgorithm;
 	// private SortAlgorithm bubleSortAlgorithm;
 	// autowiring also can use specific name of the class instead if have multi
 	// component for sort
 	// but primary still the winner of it if the one of it use primary
+	// the other one is use the Qualifier, but the Qualifier need to make the name
+	// also in several algorithm,
+	// but this can use if the implemantation need several condition
 
 	// if using setter injection - if not provide, the context will not launch at
 	// all, so basicly like mandatory also
@@ -51,8 +56,8 @@ public class BinarySearchImpl {
 
 		// for dynamic use algorithm
 
-		int[] sortedNumbers = bubleSortAlgorithm.sort(numbers);
-		System.out.println(bubleSortAlgorithm);
+		int[] sortedNumbers = sortAlgorithm.sort(numbers);
+		System.out.println(sortAlgorithm);
 
 		// implement search
 
