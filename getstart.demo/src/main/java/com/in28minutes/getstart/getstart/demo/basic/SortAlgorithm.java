@@ -1,4 +1,4 @@
-package com.in28minutes.getstart.getstart.demo;
+package com.in28minutes.getstart.getstart.demo.basic;
 
 //An interface in Java is a blueprint that defines methods but does not provide implementations. Classes that implement the interface must define those methods.
 //interface is like a contract

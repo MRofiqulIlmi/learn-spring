@@ -1,4 +1,4 @@
-package com.in28minutes.getstart.getstart.demo;
+package com.in28minutes.getstart.getstart.demo.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 //by default the scope is singleton so when we called it always be same bean called back
 //if using scope of prototype, when called twice, it will be difference instance, create twice, and have different hash code
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class BinarySearchImpl {
 
 	// autowired tells the spring sortAlgorithm is a dependencies

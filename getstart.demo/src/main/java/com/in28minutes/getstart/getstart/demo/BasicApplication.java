@@ -4,8 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.in28minutes.getstart.getstart.demo.basic.BinarySearchImpl;
+
 @SpringBootApplication
-public class Application {
+public class BasicApplication {
 
 	// need to answer about spring
 	// what are the beans?
@@ -22,7 +24,7 @@ public class Application {
 
 		// using Application context will maintain all the beans
 
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+		ConfigurableApplicationContext applicationContext = SpringApplication.run(BasicApplication.class, args);
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
 

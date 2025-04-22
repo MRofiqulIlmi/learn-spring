@@ -1,4 +1,4 @@
-package com.in28minutes.getstart.getstart.demo;
+package com.in28minutes.getstart.getstart.demo.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
