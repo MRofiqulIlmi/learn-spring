@@ -1,13 +1,22 @@
 package com.in28minutes.getstart.getstart.demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.in28minutes.getstart.getstart.demo.basic.BinarySearchImpl;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 @SpringBootApplication
+@ComponentScan("com.in28minutes.getstart.getstart.demo.basic")
 public class BasicApplication {
+
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	// need to answer about spring
 	// what are the beans?
@@ -37,4 +46,16 @@ public class BasicApplication {
 
 	}
 
+	// as soon as the bean constructed, the postContruct will be called
+	@PostConstruct
+	public void postConstruct() {
+		logger.info("postConstruct");
+	}
+
+	// pre destroy is callback notification signal before the process being remove
+	// by container
+	@PreDestroy
+	public void preDestroy() {
+		logger.info("preDestroy");
+	}
 }
