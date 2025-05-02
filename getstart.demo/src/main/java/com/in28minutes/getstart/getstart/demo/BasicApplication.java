@@ -2,17 +2,17 @@ package com.in28minutes.getstart.getstart.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.in28minutes.getstart.getstart.demo.basic.BinarySearchImpl;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
-@SpringBootApplication
+@Configuration
 @ComponentScan("com.in28minutes.getstart.getstart.demo.basic")
 public class BasicApplication {
 
@@ -33,7 +33,7 @@ public class BasicApplication {
 
 		// using Application context will maintain all the beans
 
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(BasicApplication.class, args);
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BasicApplication.class);
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
 

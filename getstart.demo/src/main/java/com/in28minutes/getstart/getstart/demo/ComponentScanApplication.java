@@ -2,10 +2,10 @@ package com.in28minutes.getstart.getstart.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.in28minutes.getstart.getstart.componentscan.ComponentDAO;
 
@@ -13,18 +13,20 @@ import com.in28minutes.getstart.getstart.componentscan.ComponentDAO;
 // but when the component in another place and cannot to find it
 // then use ComponentScan and place the package where the component exist
 
-@SpringBootApplication
-@ComponentScan("com.in28minutes.getstart.getstart.componentscan")
+@Configuration
+@ComponentScan("com.in28minutes.getstart.getstart.componentScan")
 public class ComponentScanApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(ComponentScanApplication.class);
 
 	public static void main(String[] args) {
 
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(ComponentScanApplication.class, args);
+		ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(
+				ComponentScanApplication.class);
 		ComponentDAO componentDao = applicationContext.getBean(ComponentDAO.class);
 
 		LOGGER.info("{}", componentDao);
+		System.out.println("test2");
 
 	}
 
