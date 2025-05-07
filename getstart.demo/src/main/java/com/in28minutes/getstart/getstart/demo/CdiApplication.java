@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import com.in28minutes.getstart.getstart.demo.cdi.SomeCdiBusiness;
 
 @Configuration
-@ComponentScan("com.in28minutes.getstart.getstart.demo.cdi")
+@ComponentScan
 public class CdiApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(CdiApplication.class);

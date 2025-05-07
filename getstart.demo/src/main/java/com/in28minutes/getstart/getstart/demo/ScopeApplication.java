@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import com.in28minutes.getstart.getstart.demo.scope.PersonDAO;
 
 @Configuration
-@ComponentScan("com.in28minutes.getstart.getstart.demo.scope")
+@ComponentScan
 public class ScopeApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(ScopeApplication.class);

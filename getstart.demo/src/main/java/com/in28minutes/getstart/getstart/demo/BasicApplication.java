@@ -12,7 +12,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
 @Configuration
-@ComponentScan("com.in28minutes.getstart.getstart.demo.basic")
+@ComponentScan
 public class BasicApplication {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
