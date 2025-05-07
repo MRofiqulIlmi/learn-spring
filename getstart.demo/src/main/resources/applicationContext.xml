@@ -9,15 +9,8 @@
            
   <context:component-scan base-package="com.in28minutes.getstart.getstart.demo"></context:component-scan>
 
-  <bean id="xmlJdbcConnection" class="com.in28minutes.getstart.getstart.demo.xml.XmlJdbcConnection">
-    <!-- collaborators and configuration for this bean go here -->
-  </bean>
+ 
 
-  <bean id="xmlPersonDAO" class="com.in28minutes.getstart.getstart.demo.xml.XmlPersonDAO">
-  <property name="xmlJdbcConnection" ref="xmlJdbcConnection"></property>
-    <!-- collaborators and configuration for this bean go here -->
-  </bean>
-
-  <!-- more bean definitions go here -->
+ 
 
 </beans>

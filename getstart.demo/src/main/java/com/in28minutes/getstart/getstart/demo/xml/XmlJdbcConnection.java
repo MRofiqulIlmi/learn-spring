@@ -1,12 +1,10 @@
 package com.in28minutes.getstart.getstart.demo.xml;
 
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class XmlJdbcConnection {
 	public XmlJdbcConnection() {
-		System.out.println("JDBC Connection");
+		System.out.println("JDBC Connection : using XML Context");
 	}
 }
