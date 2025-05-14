@@ -1,18 +1,18 @@
 package com.in28minutes.getstart.getstart.componentscan;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class ComponentDAO {
 	@Autowired
-	ComponentJdbcConnection jdbcConnection;
+	ComponentScanJdbcConnection jdbcConnection;
 
-	public ComponentJdbcConnection getComponentJdbcConnection() {
+	public ComponentScanJdbcConnection getComponentJdbcConnection() {
 		return jdbcConnection;
 	}
 
-	public void setComponentJdbcConnection(ComponentJdbcConnection jdbcConnection) {
+	public void setComponentJdbcConnection(ComponentScanJdbcConnection jdbcConnection) {
 		this.jdbcConnection = jdbcConnection;
 	}
 

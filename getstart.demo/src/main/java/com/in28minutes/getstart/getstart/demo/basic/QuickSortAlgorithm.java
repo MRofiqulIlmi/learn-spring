@@ -1,10 +1,10 @@
 package com.in28minutes.getstart.getstart.demo.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 // the @Primary I remove, for try the specific name auto wiring using specific name
-@Component
+@Service
 @Qualifier("quick")
 public class QuickSortAlgorithm implements SortAlgorithm {
 	public int[] sort(int[] numbers) {

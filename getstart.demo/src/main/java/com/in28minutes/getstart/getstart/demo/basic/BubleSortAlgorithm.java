@@ -1,9 +1,9 @@
 package com.in28minutes.getstart.getstart.demo.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 @Qualifier("bubble")
 public class BubleSortAlgorithm implements SortAlgorithm {
 	public int[] sort(int[] numbers) {

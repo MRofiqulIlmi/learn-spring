@@ -14,7 +14,7 @@ import com.in28minutes.getstart.getstart.componentscan.ComponentDAO;
 // then use ComponentScan and place the package where the component exist
 
 @Configuration
-@ComponentScan
+@ComponentScan("com.in28minutes.getstart.getstart.componentscan")
 public class ComponentScanApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(ComponentScanApplication.class);
