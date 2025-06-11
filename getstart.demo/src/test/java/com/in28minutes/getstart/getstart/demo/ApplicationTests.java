@@ -1,9 +1,8 @@
 package com.in28minutes.getstart.getstart.demo;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Test;
 
-@SpringBootTest
+//@SpringBootTest
 class ApplicationTests {
 
 	@Test

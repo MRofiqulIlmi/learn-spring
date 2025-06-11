@@ -66,7 +66,7 @@ public class BinarySearchImpl {
 
 		// implement search
 
-		return 3;
+		return sortedNumbers[0];
 	}
 
 }
