@@ -12,4 +12,16 @@ public class CommonJoinPointConfig {
 	public void businessLayerExecution() {
 	}
 
+	@Pointcut("com.in28minutes.spring.aop.spring_aop.aspect.CommonJoinPointConfig.dataLayerExecution() || com.in28minutes.spring.aop.spring_aop.aspect.CommonJoinPointConfig.businessLayerExecution()")
+	public void allLayerExecution() {
+	}
+
+	@Pointcut("bean(*dao*)")
+	public void beanContainingWithDaoExecution() {
+	}
+
+	@Pointcut("within(com.in28minutes.spring.aop.spring_aop.data..*)")
+	public void withinDataLayerExecution() {
+	}
+
 }

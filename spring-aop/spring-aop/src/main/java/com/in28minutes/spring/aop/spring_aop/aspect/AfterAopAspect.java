@@ -30,4 +30,18 @@ public class AfterAopAspect {
 		logger.info("After the execution of {}", joinPoint);
 	}
 
+	@After(value = "com.in28minutes.spring.aop.spring_aop.aspect.CommonJoinPointConfig.allLayerExecution()")
+	public void afterAllLayer(JoinPoint joinPoint) {
+		logger.info("all layer exe in : {} ", joinPoint);
+	}
+
+	@After(value = "com.in28minutes.spring.aop.spring_aop.aspect.CommonJoinPointConfig.beanContainingWithDaoExecution()")
+	public void afterContainingDaoBeanExe(JoinPoint joinPoint) {
+		logger.info("run with containing dao in : {}", joinPoint);
+	}
+
+	@After(value = "com.in28minutes.spring.aop.spring_aop.aspect.CommonJoinPointConfig.withinDataLayerExecution()")
+	public void afterWithinDaoExe(JoinPoint joinPoint) {
+		logger.info("run after within dao exe : {}", joinPoint);
+	}
 }
