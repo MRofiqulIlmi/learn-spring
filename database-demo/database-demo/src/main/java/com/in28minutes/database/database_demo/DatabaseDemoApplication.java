@@ -25,6 +25,7 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		logger.info("all Person data : {}", dao.findAll());
+		logger.info("data of person 10001 : {}", dao.findById(10001));
 	}
 
 }
