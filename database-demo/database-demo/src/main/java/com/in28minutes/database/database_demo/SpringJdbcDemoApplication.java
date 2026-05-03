@@ -7,13 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.in28minutes.database.database_demo.entity.Person;
 import com.in28minutes.database.database_demo.jdbc.PersonJdbcDao;
 
-@SpringBootApplication
-public class DatabaseDemoApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class SpringJdbcDemoApplication implements CommandLineRunner {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -21,7 +20,7 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 	PersonJdbcDao dao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseDemoApplication.class, args);
+		SpringApplication.run(SpringJdbcDemoApplication.class, args);
 	}
 
 	@Override
@@ -31,8 +30,8 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 		logger.info("data of person 10001 : {}", dao.findById(10001));
 		logger.info("delete of person 10002 or location is iceLand, the number of deleted row is : {}",
 				dao.deleteById(10002, "IceLand"));
-		logger.info("inserting 10004 : {}", dao.insert(new Person(10004, "udin", "Indonesia", new Date())));
-		logger.info("updating 10001 : {}", dao.update(new Person(10001, "Ranga", "Italy", new Date())));
+		logger.info("inserting 10004 : {}", dao.insert(new Person("udin", "Indonesia", new Date())));
+		logger.info("updating 10001 : {}", dao.update(new Person("Ranga", "Italy", new Date())));
 	}
 
 }

@@ -1,0 +1,35 @@
+package com.in28minutes.database.database_demo;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.in28minutes.database.database_demo.jpa.PersonJpaRepository;
+
+@SpringBootApplication
+public class JpaDemoApplication implements CommandLineRunner {
+
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	@Autowired
+	PersonJpaRepository repository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpaDemoApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		logger.info("data of person 10001 : {}", repository.findById(10001));
+//		logger.info("all Person data : {}", repository.findAll());
+//		logger.info("delete of person 10002 or location is iceLand, the number of deleted row is : {}",
+//				repository.deleteById(10002, "IceLand"));
+//		logger.info("inserting 10004 : {}", repository.insert(new Person("udin", "Indonesia", new Date())));
+//		logger.info("updating 10001 : {}", repository.update(new Person("Ranga", "Italy", new Date())));
+	}
+
+}
