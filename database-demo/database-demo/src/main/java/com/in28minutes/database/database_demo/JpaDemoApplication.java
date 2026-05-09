@@ -1,5 +1,7 @@
 package com.in28minutes.database.database_demo;
 
+import java.util.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.in28minutes.database.database_demo.entity.Person;
 import com.in28minutes.database.database_demo.jpa.PersonJpaRepository;
 
 @SpringBootApplication
@@ -28,8 +31,8 @@ public class JpaDemoApplication implements CommandLineRunner {
 //		logger.info("all Person data : {}", repository.findAll());
 //		logger.info("delete of person 10002 or location is iceLand, the number of deleted row is : {}",
 //				repository.deleteById(10002, "IceLand"));
-//		logger.info("inserting 10004 : {}", repository.insert(new Person("udin", "Indonesia", new Date())));
-//		logger.info("updating 10001 : {}", repository.update(new Person("Ranga", "Italy", new Date())));
+		logger.info("inserting 10004 : {}", repository.insert(new Person("udin", "Indonesia", new Date())));
+		logger.info("updating 10001 : {}", repository.update(new Person(10001, "Ranga", "Italy", new Date())));
 	}
 
 }
