@@ -33,6 +33,7 @@ public class JpaDemoApplication implements CommandLineRunner {
 //				repository.deleteById(10002, "IceLand"));
 		logger.info("inserting 10004 : {}", repository.insert(new Person("udin", "Indonesia", new Date())));
 		logger.info("updating 10001 : {}", repository.update(new Person(10001, "Ranga", "Italy", new Date())));
+		repository.deleteById(10002);
 	}
 
 }
