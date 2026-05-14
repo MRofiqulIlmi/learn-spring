@@ -28,12 +28,12 @@ public class JpaDemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		logger.info("data of person 10001 : {}", repository.findById(10001));
-//		logger.info("all Person data : {}", repository.findAll());
 //		logger.info("delete of person 10002 or location is iceLand, the number of deleted row is : {}",
 //				repository.deleteById(10002, "IceLand"));
 		logger.info("inserting 10004 : {}", repository.insert(new Person("udin", "Indonesia", new Date())));
 		logger.info("updating 10001 : {}", repository.update(new Person(10001, "Ranga", "Italy", new Date())));
 		repository.deleteById(10002);
+		logger.info("all Person data : {}", repository.findAll());
 	}
 
 }
