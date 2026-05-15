@@ -34,6 +34,7 @@ public class SpringDataDemoApplication implements CommandLineRunner {
 		logger.info("updating 10001 : {}", repository.save(new Person(10001, "Ranga", "Italy", new Date())));
 		repository.deleteById(10002);
 		logger.info("all Person data : {}", repository.findAll());
+		logger.info("find by name Udin: {}", repository.findByName("udin"));
 	}
 
 }
