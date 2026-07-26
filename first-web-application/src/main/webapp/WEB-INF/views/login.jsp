@@ -8,5 +8,6 @@
 </head>
 <body>
 	My First JSP
+	Hello, your name is ${name}, right ? 
 </body>
 </html>
