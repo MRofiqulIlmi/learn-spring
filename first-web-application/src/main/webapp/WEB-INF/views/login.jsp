@@ -7,7 +7,11 @@
 <title>Uhuy from JPS</title>
 </head>
 <body>
-	My First JSP
-	Hello, your name is ${name}, right ? 
+	
+	<form action="/login.do" method="post">
+		Enter your name : 
+		<input type="text" name="name">
+		<input type="submit" value="login">
+	</form>
 </body>
 </html>
